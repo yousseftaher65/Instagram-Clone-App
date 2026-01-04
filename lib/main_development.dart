@@ -1,6 +1,12 @@
 import 'package:instagram_clone_app/app/app.dart';
 import 'package:instagram_clone_app/bootstrap.dart';
+import 'package:instagram_clone_app/firebase_options_dev.dart';
+import 'package:shared/shared.dart';
 
 Future<void> main() async {
-  await bootstrap(() => const App());
+  await bootstrap(
+    (powerSyncRepository) => const App(),
+    appFlavor: AppFlavor.development(),
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }

@@ -3,6 +3,9 @@ import java.io.FileInputStream
 
 plugins {
     id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    // END: FlutterFire Configuration
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -61,11 +64,6 @@ android {
             dimension = "default"
             applicationIdSuffix = ""
             manifestPlaceholders["appName"] = "Instagram Clone App"
-        }
-        create("staging") {
-            dimension = "default"
-            applicationIdSuffix = ".stg"
-            manifestPlaceholders["appName"] = "[STG] Instagram Clone App"
         }
         create("development") {
             dimension = "default"

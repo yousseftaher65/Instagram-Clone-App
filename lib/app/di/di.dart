@@ -4,5 +4,5 @@ import 'package:shared/shared.dart';
 final GetIt getIt = GetIt.instance;
 
 void setupDi({required AppFlavor appFlavor}){
-  getIt.registerSingleton<AppEnv>(appFlavor);
+  getIt.registerSingleton(appFlavor);
 }

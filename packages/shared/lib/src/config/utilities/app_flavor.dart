@@ -35,10 +35,6 @@ class AppFlavor extends AppEnv {
       Flavor.development => EnvDev.supabaseAnonKey,
       Flavor.production => EnvProd.supabaseAnonKey,
     },
-   /*  Env.fcmServerKey => switch (flavor) {
-      Flavor.development => EnvDev.fcmServerKey,
-      Flavor.production => EnvProd.fcmServerKey,
-    },
     Env.iOSClientId => switch (flavor) {
       Flavor.development => EnvDev.iOSClientId,
       Flavor.production => EnvProd.iOSClientId,
@@ -46,10 +42,12 @@ class AppFlavor extends AppEnv {
     Env.webClientId => switch (flavor) {
       Flavor.development => EnvDev.webClientId,
       Flavor.production => EnvProd.webClientId,
-    }, */
-    
-    Env.iOSClientId => throw UnimplementedError(),
-    Env.webClientId => throw UnimplementedError(),
+    },
+    /*  Env.fcmServerKey => switch (flavor) {
+      Flavor.development => EnvDev.fcmServerKey,
+      Flavor.production => EnvProd.fcmServerKey,
+    },
+   , */
     Env.fcmServerKey => throw UnimplementedError(),
   };
 }

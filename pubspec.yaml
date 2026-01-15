@@ -11,6 +11,8 @@ dependencies:
   api_repository:
     path: packages/api_repository
   bloc: ^9.0.1
+  env:
+    path: packages/env
   firebase_core: ^4.3.0
   flutter:
     sdk: flutter
@@ -19,11 +21,14 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   get_it: ^9.2.0
+  google_sign_in: ^7.2.0
   intl: ^0.20.2
   powersync_repository:
     path: packages/powersync_repository
   shared:
     path: packages/shared
+  supabase: ^2.10.2
+  supabase_flutter: ^2.12.0
 
 dev_dependencies:
   bloc_test: ^10.0.0

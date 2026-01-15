@@ -16,4 +16,12 @@ abstract class EnvDev {
   ///Powersync url secret.
   @EnviedField(varName: 'POWER_SYNC_URL', obfuscate: true)
   static final String powerSyncUrl = _EnvDev.powerSyncUrl;
+
+  ///Google ios client id.
+  @EnviedField(varName: 'IOS_CLIENT_ID', obfuscate: true)
+  static final String iOSClientId = _EnvDev.iOSClientId;
+
+  ///Google web client id.
+  @EnviedField(varName: 'WEB_CLIENT_ID', obfuscate: true)
+  static final String webClientId = _EnvDev.webClientId;
 }

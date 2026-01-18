@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:io';
 
+import 'package:app_ui/app_ui.dart';
 import 'package:bloc/bloc.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/widgets.dart';
@@ -30,8 +32,11 @@ class AppBlocObserver extends BlocObserver {
 }
 
 //
-// ignore: lines_longer_than_80_chars
-Future<void> bootstrap(AppBuilder builder, {required AppFlavor appFlavor, required FirebaseOptions options}) async {
+Future<void> bootstrap(
+  AppBuilder builder, {
+  required AppFlavor appFlavor,
+  required FirebaseOptions options,
+}) async {
   FlutterError.onError = (details) {
     logE(details.exceptionAsString(), stackTrace: details.stack);
   };
@@ -51,10 +56,25 @@ Future<void> bootstrap(AppBuilder builder, {required AppFlavor appFlavor, requir
       final powerSyncRepository = PowerSyncRepository(env: appFlavor.getEnv);
       await powerSyncRepository.initialize();
 
+      SystemUiOverlayTheme.setPortraitOrientation();
+
+      if (appFlavor.flavor == Flavor.development) {
+        HttpOverrides.global = DevelopmentHttpOverrides();
+      }
+
       runApp(await builder(powerSyncRepository));
     },
     (error, stackTrace) {
       logE(error.toString(), stackTrace: stackTrace);
     },
   );
+}
+
+class DevelopmentHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
 }

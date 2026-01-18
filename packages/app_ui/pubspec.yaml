@@ -18,7 +18,7 @@ dependencies:
   intl: ^0.20.2
   pausable_timer: ^3.1.0+3
   shared:
-    path: ../packages/shared
+    path: ../shared
   shimmer: ^3.0.0
   timeago: ^3.7.1
 

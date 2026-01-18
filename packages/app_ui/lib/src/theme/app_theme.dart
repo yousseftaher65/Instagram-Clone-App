@@ -27,7 +27,7 @@ class AppTheme {
           primary: primary,
           swapOnMaterial3: true,
         ),
-        useMaterial3: true,
+        //useMaterial3: true,
         useMaterial3ErrorColors: true,
       ).copyWith(
         textTheme: const AppTheme().textTheme,
@@ -64,7 +64,7 @@ class AppTheme {
   TextTheme get textTheme => contentTextTheme;
 
   /// The Content text theme based on [ContentTextStyle].
-  static final contentTextTheme =
+  static final TextTheme contentTextTheme =
       TextTheme(
         displayLarge: ContentTextStyle.headline1,
         displayMedium: ContentTextStyle.headline2,
@@ -87,7 +87,7 @@ class AppTheme {
       );
 
   /// The UI text theme based on [UITextStyle].
-  static final uiTextTheme =
+  static final TextTheme uiTextTheme =
       TextTheme(
         displayLarge: UITextStyle.headline1,
         displayMedium: UITextStyle.headline2,
@@ -145,7 +145,6 @@ class AppDarkTheme extends AppTheme {
           appBarColor: AppColors.transparent,
           swapOnMaterial3: true,
         ),
-        useMaterial3: true,
         useMaterial3ErrorColors: true,
       ).copyWith(
         textTheme: const AppDarkTheme().textTheme,

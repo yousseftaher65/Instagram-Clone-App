@@ -62,7 +62,7 @@ class GoogleSignInButton extends StatelessWidget {
       onPressed: () async {
         try {
           await signInWithGoogle();
-        } catch (error, stackTrace) {
+        } on Exception catch (error, stackTrace) {
           logE(
             'Failed to sign in with Google',
             error: error,
@@ -100,7 +100,7 @@ class LogoutButton extends StatelessWidget {
             onPressed: () async {
               try {
                 await signOut();
-              } catch (error, stackTrace) {
+              } on Exception catch (error, stackTrace) {
                 logE(
                   'Failed to sign out',
                   error: error,

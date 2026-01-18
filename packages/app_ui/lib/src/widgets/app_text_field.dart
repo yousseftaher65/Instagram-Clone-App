@@ -1,3 +1,4 @@
+//
 // ignore_for_file: avoid_multiple_declarations_per_line, inference_failure_on_untyped_parameter, lines_longer_than_80_chars, public_member_api_docs
 
 import 'package:app_ui/app_ui.dart';

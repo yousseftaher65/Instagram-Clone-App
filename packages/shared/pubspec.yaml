@@ -5,13 +5,20 @@ publish_to: none
 
 environment:
   sdk: ^3.9.0
+  flutter: ^3.35.0
 
-dev_dependencies:
-  mocktail: ^1.0.4
-  test: ^1.26.3
-  very_good_analysis: ^10.0.0
 dependencies:
   env: 
     path: ../env
+  flutter:
+    sdk: flutter
+  intl: ^0.20.2
   logger: ^2.6.2
   powersync: ^1.17.0
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
+  very_good_analysis: ^10.0.0

@@ -8,13 +8,17 @@ environment:
   flutter: ^3.35.0
 
 dependencies:
+  animations: ^2.1.1
   api_repository:
     path: packages/api_repository
   app_ui:
     path: packages/app_ui
+  authentication_client:
+    path: packages/authentication_client/authentication_client
   bloc: ^9.0.1
   env:
     path: packages/env
+  equatable: ^2.0.8
   firebase_core: ^4.3.0
   flutter:
     sdk: flutter
@@ -22,6 +26,8 @@ dependencies:
   flutter_gen: any
   flutter_localizations:
     sdk: flutter
+  form_fields:
+    path: packages/form_fields
   get_it: ^9.2.0
   google_sign_in: ^7.2.0
   intl: ^0.20.2
@@ -30,7 +36,13 @@ dependencies:
   shared:
     path: packages/shared
   supabase: ^2.10.2
+  supabase_authentication_client:
+    path: packages/authentication_client/supabase_authentication_client
   supabase_flutter: ^2.12.0
+  token_storage:
+    path: packages/authentication_client/token_storage
+  user_repository:
+    path: packages/user_repository
 
 dev_dependencies:
   bloc_test: ^10.0.0

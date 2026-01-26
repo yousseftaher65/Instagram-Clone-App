@@ -615,6 +615,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.1"
+  instagram_blocks_ui:
+    dependency: "direct main"
+    description:
+      path: "packages/instagram_blocks_ui"
+      relative: true
+    source: path
+    version: "0.1.0+1"
   intl:
     dependency: "direct main"
     description:

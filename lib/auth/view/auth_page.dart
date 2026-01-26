@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:instagram_clone_app/auth/cubit/auth_cubit.dart';
 import 'package:instagram_clone_app/auth/login/view/login_page.dart';
+import 'package:instagram_clone_app/auth/signup/sign_up.dart';
 
 /// {@template auth_page}
 /// Auth page. Shows login or signup page depending on the state of `AuthCubit`.
@@ -41,8 +42,7 @@ class AuthView extends StatelessWidget {
           child: child,
         );
       },
-      child: const LoginPage(),
-      /*  child: showLogin ? const LoginPage() : const SignUpPage(), */
+      child: showLogin ? const LoginPage() : const SignUpPage(),
     );
   }
 }

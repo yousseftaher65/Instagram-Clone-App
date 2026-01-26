@@ -114,6 +114,9 @@ class LoginCubit extends Cubit<LoginState> {
         email: email.value,
         password: password.value,
       );
+
+      final newState = state.copyWith(status: LogInSubmissionStatus.success);
+      emit(newState);
     } catch (e, stackTrace) {
       _errorFormatter(e, stackTrace);
     }

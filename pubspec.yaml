@@ -30,6 +30,8 @@ dependencies:
     path: packages/form_fields
   get_it: ^9.2.0
   google_sign_in: ^7.2.0
+  instagram_blocks_ui:
+    path: packages/instagram_blocks_ui
   intl: ^0.20.2
   powersync_repository:
     path: packages/powersync_repository
@@ -43,7 +45,6 @@ dependencies:
     path: packages/authentication_client/token_storage
   user_repository:
     path: packages/user_repository
-
 dev_dependencies:
   bloc_test: ^10.0.0
   flutter_test:

@@ -69,7 +69,7 @@ class SupabaseAuthenticationClient implements AuthenticationClient {
   /// Throws a [LogInWithGoogleFailure] if an exception occurs.
   @override
   Future<void> logInWithGoogle() async {
-    try {      
+    try {
       final googleUser = await _googleSignIn.authenticate();
       final googleAuth = googleUser.authentication;
       final idToken = googleAuth.idToken;
@@ -121,8 +121,8 @@ class SupabaseAuthenticationClient implements AuthenticationClient {
     final data = {
       'full_name': fullName,
       'username': username,
-      'avatar_url': ?avatarUrl,
-      'push_token': ?pushToken,
+      'avatar_url': avatarUrl ?? '',
+      'push_token': pushToken ?? '',
     };
     try {
       await _powerSyncRepository.supabase.auth.signUp(

@@ -5,5 +5,6 @@ export 'src/email.dart';
 export 'src/formz_vaild.dart';
 export 'src/formz_vaildation_mixin.dart';
 export 'src/full_name.dart';
+export 'src/otp.dart';
 export 'src/password.dart';
 export 'src/username.dart';

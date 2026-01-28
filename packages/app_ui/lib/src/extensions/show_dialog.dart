@@ -1,4 +1,4 @@
-/* import 'dart:async';
+import 'dart:async';
 
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
@@ -342,4 +342,3 @@ extension DialogExtension on BuildContext {
     ],
   );
 }
- */

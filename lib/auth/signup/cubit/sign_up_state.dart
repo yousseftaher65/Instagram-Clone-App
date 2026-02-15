@@ -104,7 +104,7 @@ class SignUpState extends Equatable {
   }
 }
 
-/* final signupSubmissionStatusMessage =
+final signupSubmissionStatusMessage =
     <SignUpSubmissionStatus, SubmissionStatusMessage>{
       SignUpSubmissionStatus.emailAlreadyRegistered:
           const SubmissionStatusMessage(
@@ -115,4 +115,4 @@ class SignUpState extends Equatable {
           const SubmissionStatusMessage.genericError(),
       SignUpSubmissionStatus.networkError:
           const SubmissionStatusMessage.networkError(),
-    }; */
+    };

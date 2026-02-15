@@ -1,6 +1,7 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:instagram_clone_app/app/view/app.dart';
 import 'package:instagram_clone_app/auth/forgot_password/change_password/cubit/change_password_cubit.dart';
 import 'package:instagram_clone_app/auth/forgot_password/change_password/widgets/widgets.dart';
 
@@ -28,7 +29,7 @@ class _ChangePasswordFormState extends State<ChangePasswordForm> {
   Widget build(BuildContext context) {
     return BlocListener<ChangePasswordCubit, ChangePasswordState>(
       listener: (context, state) {
-        /*  if (state.status.isError) {
+         if (state.status.isError) {
           openSnackbar(
             SnackbarMessage.error(
               title: changePasswordStatusMessage[state.status]!.title,
@@ -37,12 +38,12 @@ class _ChangePasswordFormState extends State<ChangePasswordForm> {
             ),
             clearIfQueue: true,
           );
-        } */
+        }
       },
-      listenWhen: (p, c) => p.status != c.status,
+      listenWhen: (previous, current) => previous.status != current.status,
       child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           ChangePasswordOtpFormField(),
           gapH12,
           ChangePasswordFormField(),

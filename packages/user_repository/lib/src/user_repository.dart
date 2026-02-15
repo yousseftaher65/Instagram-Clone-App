@@ -155,10 +155,9 @@ class UserRepository implements UserBaseRepository {
       );
     } on ResetPasswordFailure {
       rethrow;
-      //
-      // ignore: avoid_catches_without_on_clauses
+      
     } catch (error, stackTrace) {
-      Error.throwWithStackTrace(ResetPasswordFailure, stackTrace);
+      Error.throwWithStackTrace(ResetPasswordFailure(error), stackTrace);
     }
   }
 

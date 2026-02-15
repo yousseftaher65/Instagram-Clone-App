@@ -1,8 +1,11 @@
 import 'dart:io';
 
+import 'package:authentication_client/authentication_client.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:form_fields/form_fields.dart';
+import 'package:shared/shared.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:user_repository/user_repository.dart';
 
 part 'sign_up_state.dart';
@@ -19,7 +22,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   }) : _userRepository = userRepository,
        super(const SignUpState.initial());
 
- final UserRepository _userRepository;
+  final UserRepository _userRepository;
 
   /// Changes password visibility, making it visible or not.
   void changePasswordVisibility() =>
@@ -147,7 +150,7 @@ class SignUpCubit extends Cubit<SignUpState> {
     if (!isFormValid) return;
 
     try {
-     /*  String? imageUrlResponse;
+      /*  String? imageUrlResponse;
       if (avatarFile != null) {
         final imageBytes = await PickImage().imageBytes(
           file: File(avatarFile.path),
@@ -178,7 +181,7 @@ class SignUpCubit extends Cubit<SignUpState> {
         password: password.value,
         fullName: fullName.value,
         username: username.value,
-       /*  avatarUrl: imageUrlResponse,
+        /*  avatarUrl: imageUrlResponse,
         pushToken: pushToken, */
       );
 
@@ -194,11 +197,17 @@ class SignUpCubit extends Cubit<SignUpState> {
   void _errorFormatter(Object e, StackTrace stackTrace) {
     addError(e, stackTrace);
 
-    SignUpSubmissionStatus submissionStatus() {
-      return SignUpSubmissionStatus.error;
-    }
+    final submissionStatus = switch (e) {
+      SignUpWithPasswordFailure(:final AuthException error) =>
+        switch (error.statusCode?.parse) {
+          HttpStatus.unprocessableEntity =>
+            SignUpSubmissionStatus.emailAlreadyRegistered,
+          _ => SignUpSubmissionStatus.error,
+        },
+      _ => SignUpSubmissionStatus.error,
+    };
 
-    final newState = state.copyWith(submissionStatus: submissionStatus());
+    final newState = state.copyWith(submissionStatus: submissionStatus);
     emit(newState);
   }
 }

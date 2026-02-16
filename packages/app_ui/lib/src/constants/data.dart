@@ -1,4 +1,5 @@
-/* // ignore_for_file: public_member_api_docs
+//
+// ignore_for_file: public_member_api_docs
 import 'package:flutter/material.dart';
 import 'package:shared/shared.dart';
 
@@ -107,4 +108,3 @@ List<ModalOption> followerModalOptions({
   required String unfollowLabel,
   required VoidCallback onUnfollowTap,
 }) => <ModalOption>[ModalOption(name: unfollowLabel, onTap: onUnfollowTap)];
- */

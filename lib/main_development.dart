@@ -29,7 +29,10 @@ Future<void> main() async {
       final userRepository = UserRepository(
         authenticationClient: supabaseAuthenticationClient,
       );
-      return App(userRepository: userRepository);
+      return App(
+        userRepository: userRepository,
+        user: await userRepository.user.first,
+      );
     },
     appFlavor: AppFlavor.development(),
     options: DefaultFirebaseOptions.currentPlatform,

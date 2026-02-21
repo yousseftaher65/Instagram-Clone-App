@@ -1,7 +1,7 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:instagram_clone_app/app/navigation/navigation.dart';
+import 'package:instagram_clone_app/navigation/navigation.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({required this.navigationShell, super.key});

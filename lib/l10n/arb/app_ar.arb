@@ -1,0 +1,503 @@
+{
+  "@@locale": "ar",
+  "feedAppBarTitle": "آخر الأخبار",
+  "@feedAppBarTitle": {
+    "description": "Text shown in the Feed screen in the AppBar"
+  },
+  "homeNavBarItemLabel": "الرئيسية",
+  "@homeNavBarItemLabel": {
+    "description": "Home navigation bar item tooltip"
+  },
+  "searchNavBarItemLabel": "بحث",
+  "@searchNavBarItemLabel": {
+    "description": "Search navigation bar item tooltip"
+  },
+  "createMediaNavBarItemLabel": "إنشاء",
+  "@createMediaNavBarItemLabel": {
+    "description": "Create media navigation bar item tooltip"
+  },
+  "reelsNavBarItemLabel": "ريلز",
+  "@reelsNavBarItemLabel": {
+    "description": "Reels navigation bar item tooltip"
+  },
+  "profileNavBarItemLabel": "الملف الشخصي",
+  "@profileNavBarItemLabel": {
+    "description": "Profile navigation bar item tooltip"
+  },
+  "likesText": "إعجابات",
+  "@likesText": {
+    "description": "Text displaying statis Likes text"
+  },
+  "likesCountText": "{count, plural, =1{إعجاب واحد} other{{count} إعجاب}}",
+  "@likesCountText": {
+    "description": "Text shown in post footer section that display count of likes",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "likedByText": "أعجب به {userName} و {count, plural, =1{شخص آخر} other{{count} آخرين}}",
+  "@likedByText": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "john.dale"
+      },
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "likeText": "إعجاب",
+  "unlikeText": "إلغاء الإعجاب",
+  "likesCountTextShort": "{count}",
+  "@likesCountTextShort": {
+    "description": "Text shown in post footer section that display short count of likes",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "originalAudioText": "الصوت الأصلي",
+  "discardEditsText": "تجاهل التعديلات",
+  "discardText": "تجاهل",
+  "doneText": "تم",
+  "draftEmpty": "المسودة فارغة",
+  "errorText": "خطأ",
+  "uploadText": "تحميل",
+  "loseAllEditsText": "إذا عدت الآن، ستفقد جميع التعديلات التي أجريتها.",
+  "saveDraft": "حفظ المسودة",
+  "successfullySavedText": "تم الحفظ بنجاح",
+  "tapToTypeText": "اضغط للكتابة...",
+  "noPostsText": "لا توجد منشورات بعد!",
+  "noPostFoundText": "لم يتم العثور على أي منشور!",
+  "addCommentText": "إضافة تعليق",
+  "noChatsText": "لا توجد محادثات بعد!",
+  "startChatText": "بدء محادثة",
+  "deleteCommentText": "حذف التعليق",
+  "commentDeleteConfirmationText": "هل أنت متأكد أنك تريد حذف هذا التعليق؟",
+  "deleteMessageText": "حذف الرسالة",
+  "messageDeleteConfirmationText": "هل أنت متأكد أنك تريد حذف هذه الرسالة؟",
+  "deleteChatText": "حذف المحادثة",
+  "chatDeleteConfirmationText": "هل أنت متأكد أنك تريد حذف هذه المحادثة؟",
+  "deleteReelText": "حذف الريلز",
+  "reelDeleteConfirmationText": "هل أنت متأكد أنك تريد حذف هذا الريلز؟",
+  "deleteStoryText": "حذف القصة",
+  "storyDeleteConfirmationText": "هل أنت متأكد أنك تريد حذف هذه القصة؟",
+  "commentText": "تعليق",
+  "commentsText": "التعليقات",
+  "noCommentsText": "لا توجد تعليقات",
+  "seeAllComments": "عرض كل التعليقات ({count})",
+  "@seeAllComments": {
+    "description": "Text shown under the post caption",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "yourStoryLabel": "قصتك",
+  "@yourStoryLabel": {
+    "description": "Text shown under the first storie in stories list view marked as your story"
+  },
+  "postsText": "منشورات",
+  "@postsText": {
+    "description": "Text displaying static Posts text"
+  },
+  "followUser": "متابعة",
+  "followingUser": "متابعة",
+  "followersText": "متابعون",
+  "@followersText": {
+    "description": "Text displaying static Followers text"
+  },
+  "followingsText": "يتابع",
+  "@followingsText": {
+    "description": "Text displaying static Following text"
+  },
+  "followersCountText": "{count, plural, =1{متابع واحد} other{{count} متابع}}",
+  "@followersCountText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "followingsCountText": "{count, plural, other{{count} يتابع}}",
+  "@followingsCountText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "postsCount": "{count, plural, =1{منشور} other{منشورات}}",
+  "@postsCount": {
+    "description": "Text describing the count of posts",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "profilePostsAppBarTitle": "المنشورات",
+  "@profilePostsAppBarTitle": {
+    "description": "Text shown in app bar in user's all posts screen"
+  },
+  "followersCount": "{count, plural, =1{متابع} other{متابعون}}",
+  "@followersCount": {
+    "description": "Text describing the count of posts",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "followingsCount": "{count, plural, =1{يتابع} other{يتابعون}}",
+  "@followingsCount": {
+    "description": "Text describing the count of user followings",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "optionsText": "خيارات",
+  "viewProfileText": "عرض الملف الشخصي",
+  "editProfileText": "تعديل الملف الشخصي",
+  "editingText": "جاري التعديل",
+  "@editProfileText": {
+    "description": "Text shown in account view to edit profile"
+  },
+  "editPostText": "تعديل المنشور",
+  "@editPostText": {
+    "description": "Text shown in post edit view to edit post"
+  },
+  "shareProfileText": "مشاركة الملف الشخصي",
+  "@shareProfileText": {
+    "description": "Text shown in account view to share profile"
+  },
+  "sharePostText": "مشاركة",
+  "@sharePostText": {
+    "description": "Tooltip text shown in post popup to share post"
+  },
+  "sharePostCaptionHintText": "إضافة رسالة...",
+  "sendText": "إرسال",
+  "sendSeparatelyText": "إرسال بشكل منفصل",
+  "addStoryText": "جديد",
+  "@addStoryText": {
+    "description": "Text shown in account view to add new story"
+  },
+  "sponsoredPostText": "إعلان ممول",
+  "@sponsoredPostText": {
+    "description": "Text shown on sponsored post indicating that the post is sponsored by author"
+  },
+  "visitSponsoredInstagramProfile": "زيارة الملف الشخصي على Instagram",
+  "@visitSponsoredInstagramProfile": {
+    "description": "Text shown on sponsored post telling that this action will navigate user to author's instagram profile"
+  },
+  "visitSponsoredPostAuthorProfileText": "زيارة الملف الشخصي على Instagram",
+  "@visitSponsoredPostAuthorProfileText": {
+    "description": "Text shown on sponsored post telling that this action will navigate user to author profile"
+  },
+  "learnMoreAboutUserPromoText": "تعرف على المزيد",
+  "@learnMoreAboutUserPromoText": {
+    "description": "Text shown in a floating action promo in user profile when was navigated from sponsored post"
+  },
+  "visitUserPromoWebsiteText": "الانتقال إلى موقع الويب",
+  "@visitUserPromoWebsiteText": {
+    "description": "Text shown in a floating action promo in user profile when was navigated from sponsored post"
+  },
+  "cancelFollowingText": "إلغاء المتابعة",
+  "@cancelFollowingText": {
+    "description": "Text shown in modal bottom sheet to cancel current following to user"
+  },
+  "haveSeenAllRecentPosts": "لقد شاهدت كل شيء",
+  "@haveSeenAllRecentPosts": {
+    "description": "Header text shown in divider block when user have seen all recent posts"
+  },
+  "haveSeenAllRecentPostsInPast3Days": "لقد شاهدت جميع المنشورات الجديدة من الأيام الثلاثة الماضية.",
+  "@haveSeenAllRecentPostsInPast3Days": {
+    "description": "Body text shown in divider block when user have seen all recent posts in past 3 days"
+  },
+  "suggestedForYouText": "مقترح لك",
+  "@suggestedForYouText": {
+    "description": "Text shown in a suggested section block."
+  },
+  "andText": "و",
+  "othersText": "{count, plural, =0{} =1{شخص آخر} other{{count} آخرين}}",
+  "@othersText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "newPostText": "منشور جديد",
+  "newAvatarImageText": "صورة شخصية جديدة",
+  "writeCaptionText": "كتابة شرح...",
+  "logOutText": "تسجيل الخروج",
+  "logOutConfirmationText": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+  "notShowAgainText": "عدم الإظهار مرة أخرى",
+  "blockPostAuthorText": "حظر صاحب المنشور",
+  "blockAuthorText": "حظر الناشر",
+  "blockAuthorConfirmationText": "هل أنت متأكد أنك تريد حظر هذا الناشر؟",
+  "blockText": "حظر",
+  "refreshText": "تحديث",
+  "noReelsFoundText": "لا توجد ريلز بعد",
+  "publishText": "نشر",
+  "searchText": "بحث",
+  "addMessageText": "إضافة رسالة",
+  "messageText": "رسالة",
+  "editPictureText": "تعديل الصورة",
+  "requiredFieldText": "هذا الحقل مطلوب",
+  "passwordLengthErrorText": "يجب أن تحتوي كلمة المرور على {count} أحرف على الأقل",
+  "@passwordLengthErrorText": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "changeText": "تغيير",
+  "changePhotoText": "تغيير الصورة",
+  "fullNameEditDescription": "ساعد الأشخاص في اكتشاف حسابك باستخدام الاسم الذي تُعرف به: إما اسمك الكامل أو اسم شهرتك أو اسم نشاطك التجاري.\n\nيمكنك تغيير اسمك مرتين فقط خلال 14 يومًا.",
+  "usernameEditDescription": "ستتمكن من تغيير اسم المستخدم الخاص بك مرة أخرى إلى {username} لمدة 14 يومًا أخرى",
+  "@usernameEditDescription": {
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "emil"
+      }
+    }
+  },
+  "profileInfoEditConfirmationText": "هل أنت متأكد أنك تريد تغيير {changeType} إلى {newUsername} ؟",
+  "@profileInfoEditConfirmationText": {
+    "placeholders": {
+      "newUsername": {
+        "type": "String",
+        "example": "jorge"
+      },
+      "changeType": {
+        "type": "String",
+        "example": "username"
+      }
+    }
+  },
+  "profileInfoChangePeriodText": "يمكنك تغيير {changeType} مرتين فقط كل {count} يومًا",
+  "@profileInfoChangePeriodText": {
+    "placeholders": {
+      "changeType": {
+        "type": "String",
+        "example": "username"
+      },
+      "count": {
+        "type": "int",
+        "example": "14"
+      }
+    }
+  },
+  "forgotPasswordText": "هل نسيت كلمة المرور؟",
+  "recoveryPasswordText": "استعادة كلمة المرور",
+  "orText": "أو",
+  "signInWithText": "تسجيل الدخول باستخدام {provider}",
+  "@signInWithText": {
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "Google"
+      }
+    }
+  },
+  "goBackConfirmationText": "هل أنت متأكد أنك تريد العودة؟",
+  "goBackText": "العودة",
+  "furtherText": "المزيد",
+  "somethingWentWrongText": "حدث خطأ ما!",
+  "failedToCreateStoryText": "فشل إنشاء القصة",
+  "successfullyCreatedStoryText": "تم إنشاء القصة بنجاح!",
+  "createText": "إنشاء",
+  "reelText": "ريلز",
+  "postText": "منشور",
+  "storyText": "قصة",
+  "removeText": "إزالة",
+  "removeFollowerText": "إزالة المتابع",
+  "removeFollowerConfirmationText": "هل أنت متأكد أنك تريد إزالة المتابع؟",
+  "deletePostText": "حذف المنشور",
+  "deletePostConfirmationText": "هل أنت متأكد أنك تريد حذف هذا المنشور؟",
+  "cancelText": "إلغاء",
+  "captionText": "شرح",
+  "noCameraFoundText": "لم يتم العثور على كاميرا!",
+  "videoText": "فيديو",
+  "photoText": "صورة",
+  "clearImagesText": "مسح الصور المختارة",
+  "galleryText": "المعرض",
+  "deletingText": "حذف",
+  "notFoundingCameraText": "لم يتم العثور على كاميرا ثانوية",
+  "holdButtonText": "اضغط مع الاستمرار للتسجيل",
+  "noMediaFound": "لا توجد وسائط",
+  "acceptAllPermissionsText": "فشل! يرجى قبول جميع أذونات الوصول.",
+  "noLastMessagesText": "لا توجد رسائل أخيرة",
+  "onlineText": "نشط الآن",
+  "moreText": "المزيد",
+  "noAccountText": "ليس لديك حساب؟",
+  "alreadyHaveAccountText": "لديك حساب بالفعل؟",
+  "nameText": "الاسم",
+  "usernameText": "اسم المستخدم",
+  "forgotPasswordEmailConfirmationText": "تأكيد البريد الإلكتروني",
+  "verificationTokenSentText": "تم إرسال رمز التحقق إلى {email}",
+  "@verificationTokenSentText": {
+    "placeholders": {
+      "email": {
+        "type": "String",
+        "example": "johndale@gmail.com"
+      }
+    }
+  },
+  "emailText": "البريد الإلكتروني",
+  "otpText": "رمز إعادة التعيين",
+  "changePasswordText": "تغيير كلمة المرور",
+  "passwordText": "كلمة المرور",
+  "newPasswordText": "كلمة مرور جديدة",
+  "loginText": "تسجيل الدخول",
+  "signUpText": "تسجيل",
+  "bioText": "السيرة الذاتية",
+  "postUnavailableText": "المنشور غير متاح",
+  "postUnavailableDescriptionText": "هذا المنشور غير متاح حالياً",
+  "editText": "تعديل",
+  "editedText": "تم التعديل",
+  "deleteText": "حذف",
+  "replyText": "رد",
+  "replyToText": "الرد على {username}",
+  "@replyToText": {
+    "placeholders": {
+      "username": {
+        "type": "String",
+        "example": "emil"
+      }
+    }
+  },
+  "themeText": "المظهر",
+  "systemOption": "النظام",
+  "@systemOption": {
+    "description": "The option to use system-wide theme in the theme selector menu"
+  },
+  "lightModeOption": "فاتح",
+  "@lightModeOption": {
+    "description": "The option for light mode in the theme selector menu"
+  },
+  "darkModeOption": "داكن",
+  "@darkModeOption": {
+    "description": "The option for dark mode in the theme selector menu"
+  },
+  "languageText": "اللغة",
+  "arOptionText": "العربية",
+  "enOptionText": "الإنجليزية",
+  "secondsAgo": "{seconds, plural, =1{منذ ثانية} other{منذ {seconds} ثانية}}",
+  "@secondsAgo": {
+    "description": "Represents a text of seconds ago",
+    "placeholders": {
+      "seconds": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "minutesAgo": "{minutes, plural, =1{منذ دقيقة} other{منذ {minutes} دقيقة}}",
+  "@minutesAgo": {
+    "description": "Represents a text of minutes ago",
+    "placeholders": {
+      "minutes": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "hoursAgo": "{hours, plural, =1{منذ ساعة} other{منذ {hours} ساعة}}",
+  "@hoursAgo": {
+    "description": "Represents a text of hours ago",
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "daysAgo": "{days, plural, =1{منذ يوم} other{منذ {days} يوم}}",
+  "@daysAgo": {
+    "description": "Represents a text of days ago",
+    "placeholders": {
+      "days": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "weeksAgo": "{weeks, plural, =1{منذ أسبوع} other{منذ {weeks} أسبوع}}",
+  "@weeksAgo": {
+    "description": "Represents a text of weeks ago",
+    "placeholders": {
+      "weeks": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "monthsAgo": "{months, plural, =1{منذ شهر} other{منذ {months} شهر}}",
+  "@monthsAgo": {
+    "description": "Represents a text of months ago",
+    "placeholders": {
+      "months": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "yearsAgo": "{years, plural, =1{منذ سنة} other{منذ {years} سنة}}",
+  "@yearsAgo": {
+    "description": "Represents a text of years ago",
+    "placeholders": {
+      "years": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "networkError": "حدث خطأ في الشبكة.\nتحقق من اتصالك وحاول مرة أخرى.",
+  "@networkError": {
+    "description": "Text displayed when a network error occurs."
+  },
+  "networkErrorButton": "إعادة المحاولة",
+  "@networkErrorButton": {
+    "description": "Text displayed on the refresh button when a network error occurs."
+  },
+  "likedByLabel": "أعجب به <username>{userName}</username>{and}<count>{count}</count>",
+  "@likedByLabel": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "john.dale"
+      },
+      "and": {
+        "type": "String",
+        "description": "Optional placeholder for the word 'and'",
+        "example": "and"
+      },
+      "count": {
+        "type": "String",
+        "example": "1"
+      }
+    }
+  }
+}

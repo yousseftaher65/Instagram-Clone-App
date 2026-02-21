@@ -3,11 +3,13 @@ import 'dart:async';
 import 'package:animations/animations.dart';
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:instagram_clone_app/app/app.dart';
-import 'package:instagram_clone_app/app/home/view/home.dart';
 import 'package:instagram_clone_app/app/routes/routes.dart';
 import 'package:instagram_clone_app/auth/auth.dart';
+import 'package:instagram_clone_app/home/home.dart';
+import 'package:instagram_clone_app/user_profile/user_profile.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 
@@ -99,19 +101,17 @@ class AppRouter {
             routes: [
               GoRoute(
                 path: PageRouteName.userProfile,
-                pageBuilder: (context, state) => getSharedAxisTranistionPage(
-                  state: state,
-                  child: AppScaffold(
-                    body: Center(
-                      child: Text(
-                        'User Profile',
-                        style: context.headlineSmall?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                pageBuilder: (context, state) {
+                  final user = context.select(
+                    (AppBloc bloc) => bloc.state.user,
+                  );
+                  return getSharedAxisTranistionPage(
+                    state: state,
+                    child: UserProfilePage(
+                      userId: user.id,
                     ),
-                  ),
-                ),
+                  );
+                },
               ),
             ],
           ),

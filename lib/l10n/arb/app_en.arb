@@ -402,7 +402,7 @@
     "description": "The option for dark mode in the theme selector menu"
   },
   "languageText": "Language",
-  "ruOptionText": "Russian",
+  "arOptionText": "Arabic",
   "enOptionText": "English",
   "secondsAgo": "{seconds, plural, =1{1 second ago} other{{seconds} seconds ago}}",
   "@secondsAgo": {

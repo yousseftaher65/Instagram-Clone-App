@@ -1,8 +1,10 @@
+import 'package:database_client/database_client.dart';
 import 'package:env/env.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:instagram_clone_app/app/app.dart';
 import 'package:instagram_clone_app/bootstrap.dart';
 import 'package:instagram_clone_app/firebase_options_prod.dart';
+import 'package:posts_repository/posts_repository.dart';
 import 'package:shared/shared.dart';
 import 'package:supabase_authentication_client/supabase_authentication_client.dart';
 import 'package:token_storage/token_storage.dart';
@@ -26,12 +28,22 @@ Future<void> main() async {
         googleSignIn: googleSignIn,
       );
 
+      final databaseClient = PowerSyncDatabaseClient(
+        powerSyncRepository: powerSyncRepository,
+      );
+
+      final postsRepository = PostsRepository(
+        databaseClient: databaseClient,
+      );
+
       final userRepository = UserRepository(
         authenticationClient: supabaseAuthenticationClient,
+        databaseClient: databaseClient,
       );
       return App(
         userRepository: userRepository,
         user: await userRepository.user.first,
+        postsRepository: postsRepository,
       );
     },
     appFlavor: AppFlavor.production(),

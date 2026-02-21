@@ -8,7 +8,8 @@ enum AppRoutes {
   reels(PageRouteName.reels),
   createMedia(PageRouteName.createMedia),
   search(PageRouteName.search),
-  timeline(PageRouteName.timeline);
+  timeline(PageRouteName.timeline),
+  editProfile(PageRouteName.editProfile);
 
   //
   // ignore: unused_element_parameter

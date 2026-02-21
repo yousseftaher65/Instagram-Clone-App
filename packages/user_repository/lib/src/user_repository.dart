@@ -9,12 +9,12 @@ import 'package:user_repository/user_repository.dart';
 class UserRepository implements UserBaseRepository {
   /// {@macro user_repository}
   const UserRepository({
-    // required DatabaseClient databaseClient,
+    required DatabaseClient databaseClient,
     required AuthenticationClient authenticationClient,
-  }) : //_databaseClient = databaseClient,
+  }) : _databaseClient = databaseClient,
        _authenticationClient = authenticationClient;
 
-  // final DatabaseClient _databaseClient;
+  final DatabaseClient _databaseClient;
   final AuthenticationClient _authenticationClient;
 
   /// Stream of [User] which will emit the current user when
@@ -155,18 +155,17 @@ class UserRepository implements UserBaseRepository {
       );
     } on ResetPasswordFailure {
       rethrow;
-      
     } catch (error, stackTrace) {
       Error.throwWithStackTrace(ResetPasswordFailure(error), stackTrace);
     }
   }
 
   @override
-  String? get currentUserId => throw UnimplementedError();
-
-  @override
   Future<void> follow({required String followToId, String? followerId}) {
-    throw UnimplementedError();
+    return _databaseClient.follow(
+      followToId: followToId,
+      followerId: followerId,
+    );
   }
 
   @override
@@ -175,18 +174,11 @@ class UserRepository implements UserBaseRepository {
   }
 
   @override
-  Stream<int> followersCountOf({required String userId}) {
-    throw UnimplementedError();
-  }
-
-  @override
   Stream<bool> followingStatus({required String userId, String? followerId}) {
-    throw UnimplementedError();
-  }
-
-  @override
-  Stream<int> followingsCountOf({required String userId}) {
-    throw UnimplementedError();
+    return _databaseClient.followingStatus(
+      userId: userId,
+      followerId: followerId,
+    ).asBroadcastStream();
   }
 
   @override
@@ -201,13 +193,26 @@ class UserRepository implements UserBaseRepository {
 
   @override
   Future<bool> isFollowed({required String userId, String? followerId}) {
-    throw UnimplementedError();
+    return _databaseClient.isFollowed(
+      userId: userId,
+      followerId: followerId,
+    );
   }
 
   @override
-  Stream<User> profile({required String id}) {
-    throw UnimplementedError();
-  }
+  String? get currentUserId => _databaseClient.currentUserId;
+
+  @override
+  Stream<User> profile({required String userId}) =>
+      _databaseClient.profile(userId: userId);
+
+  @override
+  Stream<int> followersCountOf({required String userId}) =>
+      _databaseClient.followersCountOf(userId: userId);
+
+  @override
+  Stream<int> followingsCountOf({required String userId}) =>
+      _databaseClient.followingsCountOf(userId: userId);
 
   @override
   Future<void> removeFollower({required String id}) {
@@ -227,7 +232,10 @@ class UserRepository implements UserBaseRepository {
 
   @override
   Future<void> unfollow({required String unfollowId, String? unfollowerId}) {
-    throw UnimplementedError();
+    return _databaseClient.unfollow(
+      unfollowId: unfollowId,
+      unfollowerId: unfollowerId,
+    );
   }
 
   @override

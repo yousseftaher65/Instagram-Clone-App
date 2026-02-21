@@ -7,4 +7,6 @@ class PageRouteName {
   static const String createMedia = '/create-media';
   static const String search = '/search';
   static const String timeline = '/timeline';
+  static const String userStatistics = '/user-statistics';
+  static const String editProfile = '/edit-profile';
 }

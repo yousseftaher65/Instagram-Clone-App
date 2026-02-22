@@ -9,6 +9,9 @@ import 'package:user_repository/user_repository.dart';
 /// Key to access the [AppSnackbarState] from the [BuildContext]
 final snackbarKey = GlobalKey<AppSnackbarState>();
 
+/// Key to access the [AppLoadingIndeterminateState] from the [BuildContext]
+final loadingKey = GlobalKey<AppLoadingIndeterminateState>();
+
 class App extends StatelessWidget {
   const App({
     required this.user,
@@ -44,6 +47,17 @@ class App extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Shows/hides the loading progress.
+void toggleLoadingIndeterminate({
+  bool visible = true,
+  bool autoHide = false,
+}) {
+  loadingKey.currentState?.setVisibility(
+    visible: visible,
+    autoHide: autoHide,
+  );
 }
 
 /// Snack bar to show messages to the user.

@@ -39,6 +39,9 @@ class AppView extends StatelessWidget {
                         AppSnackbar(
                           key: snackbarKey,
                         ),
+                        AppLoadingIndeterminate(
+                          key: loadingKey,
+                        ),
                       ],
                     );
                   },

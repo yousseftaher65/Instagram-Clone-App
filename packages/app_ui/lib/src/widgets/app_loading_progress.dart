@@ -1,4 +1,6 @@
-/* // ignore_for_file: public_member_api_docs
+
+//
+// ignore_for_file: public_member_api_docs
 
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +36,7 @@ class AppLoadingIndeterminateState extends State<AppLoadingIndeterminate> {
   }) {
     _visible.value = visible;
     _opacity.value = visible == false ? 1 : opacity ?? 1;
-    if (!autoHide && !visible) return;
+    if (!autoHide) return;
     _debouncer.run(() {
       _visible.value = false;
     });
@@ -127,4 +129,3 @@ class Helper {
     return getWidthNavigationSidebar(context) > 0;
   }
 }
- */
